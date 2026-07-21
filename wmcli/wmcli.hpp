@@ -171,6 +171,14 @@
 //       usleep(miliseconds / 1000); 
 //     }
 // };
+namespace Color {
+    constexpr const char* RESET   = "\033[0m";
+    constexpr const char* BOLD    = "\033[1m";
+    constexpr const char* RED     = "\033[31m";
+    constexpr const char* GREEN   = "\033[32m";
+    constexpr const char* YELLOW  = "\033[33m";
+    constexpr const char* CYAN    = "\033[36m";
+}
 
 namespace wm
 {
@@ -220,6 +228,7 @@ namespace wm
     template<typename... Args>
     inline void printAt(int row, int col, const std::string& format, Args... args)
     {
+        row += 1;
         // 1. Calculate the exact buffer size needed for the formatted string
         // We add 1 for the null-terminator
         int size = std::snprintf(nullptr, 0, format.c_str(), args...) + 1; 

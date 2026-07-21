@@ -34,7 +34,7 @@ int main() {
       cookies += 2;
     }
 
-    wm::printAt(1, 3, "cookies: %f", cookies);
+    wm::printAt(1, 3, "%s cookies: %f%s", Color::YELLOW, cookies, Color::RESET);
     wm::printAt(2, 3, "press a to buy clickers for 50$, count: %i", clickers);
     wm::printAt(3, 4, "press b to buy farm for 500$, count: %i", farms);
 

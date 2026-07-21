@@ -224,7 +224,13 @@ namespace wm
     //     std::cout << text;
     //     std::cout.flush();
     // }
-
+    inline void printAt(int row, int col, const std::string& text)
+    {
+        moveCursor(row, col);
+        std::cout << text;
+        std::cout.flush();
+    }
+    
     template<typename... Args>
     inline void printAt(int row, int col, const std::string& format, Args... args)
     {

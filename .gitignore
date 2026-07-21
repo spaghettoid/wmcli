@@ -1,0 +1,14 @@
+*.o
+*.obj
+*.exe
+*.out
+
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile
+
+main.cpp.1.txt
+main.cpp.txt
+
+/game
